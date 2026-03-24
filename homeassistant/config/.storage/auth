@@ -71,23 +71,6 @@
         "version": "2026.2.2"
       },
       {
-        "id": "299ef38b01f24dfe8a77769bb2d1aeae",
-        "user_id": "6b16be32568f41c68fbcc067376a5132",
-        "client_id": "http://localhost:8123/",
-        "client_name": null,
-        "client_icon": null,
-        "token_type": "normal",
-        "created_at": "2026-02-15T09:13:35.816293+00:00",
-        "access_token_expiration": 1800.0,
-        "token": "dec4d9353bd787b4cf4b6b160f8562000e751fdcfede1f180357d40f4c513b5551fff20ca2f4ef4ce76da80ab6dbcccc081b0ae1bc9ef1648543a2ff40e3f21e",
-        "jwt_key": "0c8955da2051e26816c76662c68e6df124d94a287bd7024f0cc7a5c23c59037a882e3d07780d1222e7a32140dfe00c6961548292a6a99a5ed23f3d10ffbce07e",
-        "last_used_at": "2026-03-24T07:16:23.858712+00:00",
-        "last_used_ip": "157.249.81.141",
-        "expire_at": 1782112583.858712,
-        "credential_id": "a46b3035261e442db570115810b8a429",
-        "version": "2026.2.2"
-      },
-      {
         "id": "cbffdaef2e2e40f797361c4174bc23ca",
         "user_id": "6b16be32568f41c68fbcc067376a5132",
         "client_id": "http://localhost:8123/",

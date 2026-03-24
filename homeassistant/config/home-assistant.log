@@ -1,1 +1,0 @@
-2026-03-24 08:45:50.937 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for sunsynk @ 192.168.86.25: Error connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.86.25', port=6053))]: [Errno 111] Connect call failed ('192.168.86.25', 6053) (SocketAPIError)
