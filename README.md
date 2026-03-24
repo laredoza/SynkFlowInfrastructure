@@ -1,22 +1,25 @@
-# Home Assistant & ESPHome
+# SynkFlowInfrastructure
 
-Docker Compose setup for running Home Assistant and ESPHome.
-
-## Prerequisites
-
-- Docker and Docker Compose installed
-- Linux host recommended (for `network_mode: host` and `/run/dbus` support)
+Docker Compose stack for the SynkFlow platform's infrastructure services: Home Assistant, ESPHome, and Mosquitto MQTT broker.
 
 ## Services
 
-| Service | Port | Dashboard |
-|---------|------|-----------|
-| Home Assistant | 8123 | `http://<your-ip>:8123` |
-| ESPHome | 6052 | `http://<your-ip>:6052` |
+| Service | Image | Port | Description |
+|---------|-------|------|-------------|
+| Home Assistant | `ghcr.io/home-assistant/home-assistant:stable` | 8123 | Home automation platform |
+| ESPHome | `ghcr.io/esphome/esphome` | 6052 | ESP device management |
+| Mosquitto | `eclipse-mosquitto:2` | 1883 | MQTT broker |
+
+All services run on the `synk-flow` Docker network, which is also used by [SynkFlowAPI](../SynkFlowAPI).
+
+## Prerequisites
+
+- Docker and Docker Compose
 
 ## Getting Started
 
 ```bash
+# Start infrastructure (creates the synk-flow network)
 docker compose up -d
 ```
 
@@ -36,15 +39,16 @@ docker compose up -d
 ## Directory Structure
 
 ```
-.
 ├── docker-compose.yml
 ├── homeassistant/
-│   └── config/          # Home Assistant configuration
-└── esphome/
-    └── config/          # ESPHome device configurations
+│   └── config/              # Home Assistant configuration
+├── esphome/
+│   └── config/              # ESPHome device configurations
+└── mosquitto/
+    ├── config/              # mosquitto.conf
+    ├── data/
+    └── log/
 ```
-
-Config directories are created automatically on first run.
 
 ## Sunsynk Inverter — ESP32 RS485 Wiring
 
@@ -71,9 +75,3 @@ Config directories are created automatically on first run.
 - Config file: `esphome/config/sunsynk.yaml`
 - Secrets file: `esphome/config/secrets.yaml`
 - Modbus: 9600 baud, 8N1, address `0x00`
-
-## Notes
-
-- Both services run with `network_mode: host` to enable mDNS discovery and local network access to ESP devices.
-- Both services run in privileged mode for USB/hardware access.
-- Services restart automatically unless explicitly stopped.
