@@ -1,0 +1,32 @@
+esphome:
+  name: sunsynk
+  friendly_name: Sunsynk
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "/6j16NCFO039MNEcWi1gXivW20aVxizQRv8RfnzlRYI="
+
+ota:
+  - platform: esphome
+    password: "7b4698faca9de6680f16ad8ee14ef404"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Sunsynk Fallback Hotspot"
+    password: "0h4LDFLzNfHj"
+
+captive_portal:
+    

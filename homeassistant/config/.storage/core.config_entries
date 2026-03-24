@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 5,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {"created_at":"2026-02-15T09:08:47.002484+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"sun","entry_id":"01KHG8YG8TBZ7CH36W8B70QAMD","minor_version":1,"modified_at":"2026-02-15T09:08:47.002487+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"import","subentries":[],"title":"Sun","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T09:08:47.498282+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"go2rtc","entry_id":"01KHG8YGRAM5PJBJ6NNH89XH0E","minor_version":1,"modified_at":"2026-02-15T09:08:47.498285+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"system","subentries":[],"title":"go2rtc","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T09:08:47.518862+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"backup","entry_id":"01KHG8YGRY1DYXWRPYW56Z9MZF","minor_version":1,"modified_at":"2026-02-15T09:08:47.518863+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"system","subentries":[],"title":"Backup","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T09:11:40.351757+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"shopping_list","entry_id":"01KHG93SHZRT7KXC5DXAT8EAMD","minor_version":1,"modified_at":"2026-02-15T09:11:40.351761+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Shopping list","unique_id":"shopping_list","version":1},
+      {"created_at":"2026-02-15T09:11:40.393902+00:00","data":{"track_home":true},"disabled_by":null,"discovery_keys":{},"domain":"met","entry_id":"01KHG93SK99T0B8GQ8N1VAGVSZ","minor_version":1,"modified_at":"2026-02-15T09:11:40.393905+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Home","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T09:11:40.404003+00:00","data":{"language":"en","tld":"com"},"disabled_by":null,"discovery_keys":{},"domain":"google_translate","entry_id":"01KHG93SKK71ZHZBB19DSSE610","minor_version":1,"modified_at":"2026-02-15T09:11:40.404006+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Google Translate text-to-speech","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T09:11:40.555603+00:00","data":{},"disabled_by":null,"discovery_keys":{},"domain":"radio_browser","entry_id":"01KHG93SRB5MY1AKF5F6XD44ED","minor_version":1,"modified_at":"2026-02-15T09:11:40.555606+00:00","options":{},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"onboarding","subentries":[],"title":"Radio Browser","unique_id":null,"version":1},
+      {"created_at":"2026-02-15T11:03:24.427487+00:00","data":{"device_name":"sunsynk","host":"192.168.86.25","noise_psk":"f7vjvAVnP68OISC6NXWSfz5DdNQCUSQFuT3kknD8BGk=","password":"","port":6053},"disabled_by":null,"discovery_keys":{},"domain":"esphome","entry_id":"01KHGFGCGB9RG4K592YJR3S70Q","minor_version":1,"modified_at":"2026-03-22T22:00:04.415101+00:00","options":{"allow_service_calls":false,"subscribe_logs":true},"pref_disable_new_entities":false,"pref_disable_polling":false,"source":"user","subentries":[],"title":"sunsynk","unique_id":"e4:65:b8:54:1f:88","version":1}
+    ]
+  }
+}
