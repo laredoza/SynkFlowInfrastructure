@@ -75,3 +75,7 @@ docker compose up -d
 - Config file: `esphome/config/sunsynk.yaml`
 - Secrets file: `esphome/config/secrets.yaml`
 - Modbus: 9600 baud, 8N1, address `0x00`
+
+### Create Folder
+mkdir -p /opt/stage9software/mosquitto/data
+mkdir -p /opt/stage9software/mosquitto/log
