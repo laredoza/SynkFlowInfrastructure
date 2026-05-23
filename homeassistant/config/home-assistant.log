@@ -1,1 +1,23 @@
 2026-03-24 09:34:31.349 WARNING (MainThread) [aioesphomeapi.reconnect_logic] Can't connect to ESPHome API for sunsynk @ 192.168.86.25: Timeout while connecting to [AddrInfo(family=<AddressFamily.AF_INET: 2>, type=<SocketKind.SOCK_STREAM: 1>, proto=6, sockaddr=IPv4Sockaddr(address='192.168.86.25', port=6053))] (TimeoutAPIError)
+2026-03-24 15:49:44.224 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:398]: esphome.ota set Warning flag: unspecified
+2026-03-24 15:50:59.962 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 15:51:03.574 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 157.249.81.141 (157.249.81.141). Requested URL: '/auth/login_flow/4c81754d06ec587bebeaaa5a1776a64d'. (Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36)
+2026-03-24 15:51:40.360 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][api.connection:2442]: ESPHome Logs 2026.3.0 (192.168.86.23): Reading failed CONNECTION_CLOSED errno=128
+2026-03-24 15:52:00.744 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 157.249.81.141 (157.249.81.141). Requested URL: '/auth/login_flow/cce63a825dc672f2db9da92ce6691e74'. (Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36)
+2026-03-24 15:54:44.051 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 15:58:26.669 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 15:59:01.219 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][modbus:418]: Clearing buffer of 1 bytes - timeout after partial response 111ms after last send
+2026-03-24 16:00:36.431 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][api.connection:2442]: ESPHome Logs 2026.3.0 (192.168.86.23): Reading failed CONNECTION_CLOSED errno=128
+2026-03-24 16:26:26.436 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:429]: esphome.ota cleared Warning flag
+2026-03-24 16:26:35.337 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 16:26:35.795 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:520]: modbus_controller took a long time for an operation (75 ms), max is 30 ms
+2026-03-24 16:26:44.482 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:520]: modbus_controller took a long time for an operation (223 ms), max is 30 ms
+2026-03-24 16:27:45.920 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][api.connection:2442]: ESPHome Logs 2026.3.0 (192.168.86.23): Reading failed CONNECTION_CLOSED errno=128
+2026-03-24 16:27:50.675 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 16:27:55.281 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][api.connection:2442]: ESPHome Logs 2026.3.0 (192.168.86.23): Reading failed CONNECTION_CLOSED errno=128
+2026-03-24 16:28:09.480 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:398]: esphome.ota set Warning flag: unspecified
+2026-03-24 16:28:34.063 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:429]: esphome.ota cleared Warning flag
+2026-03-24 16:28:43.760 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][app:247]: Set minimum_chip_revision: "3.1" to reduce binary size
+2026-03-24 16:28:47.451 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][modbus_controller:307]: Duplicate modbus command found: type=0x3 address=293 count=1
+2026-03-24 16:28:47.453 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][modbus_controller:307]: Duplicate modbus command found: type=0x3 address=326 count=1
+2026-03-24 16:34:15.131 WARNING (MainThread) [homeassistant.components.esphome.manager] sunsynk: [W][component:520]: modbus_controller took a long time for an operation (2335 ms), max is 30 ms

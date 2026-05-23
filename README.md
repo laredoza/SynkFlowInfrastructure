@@ -1,6 +1,11 @@
 # SynkFlowInfrastructure
 
-Docker Compose stack for the SynkFlow platform's infrastructure services: Home Assistant, ESPHome, and Mosquitto MQTT broker.
+Local Docker Compose stack for the SynkFlow platform's on-prem services:
+Mosquitto (MQTT broker), ESPHome (manages the Sunsynk RS485 bridge firmware),
+and Home Assistant (automations over the same MQTT data).
+
+> Not cloud infrastructure — no Terraform / Pulumi / Kubernetes here.
+> Everything runs on a single LAN host.
 
 ## Services
 
@@ -10,17 +15,23 @@ Docker Compose stack for the SynkFlow platform's infrastructure services: Home A
 | ESPHome | `ghcr.io/esphome/esphome` | 6052 | ESP device management |
 | Mosquitto | `eclipse-mosquitto:2` | 1883 | MQTT broker |
 
-All services run on the `synk-flow` Docker network, which is also used by [SynkFlowAPI](../SynkFlowAPI).
+All services run on the `synk-flow` Docker network, also used by
+[SynkFlowAPI](../SynkFlowAPI).
 
 ## Prerequisites
 
-- Docker and Docker Compose
+- Docker + Docker Compose
+- Create the Mosquitto host paths once before the first `up -d`:
 
-## Getting Started
+  ```bash
+  sudo mkdir -p /opt/stage9software/mosquitto/data
+  sudo mkdir -p /opt/stage9software/mosquitto/log
+  ```
+
+## Getting started
 
 ```bash
-# Start infrastructure (creates the synk-flow network)
-docker compose up -d
+docker compose up -d        # start all services and create the synk-flow network
 ```
 
 ## Stopping
@@ -36,18 +47,20 @@ docker compose pull
 docker compose up -d
 ```
 
-## Directory Structure
+## Directory structure
 
 ```
 ├── docker-compose.yml
 ├── homeassistant/
-│   └── config/              # Home Assistant configuration
+│   └── config/             # HA YAML, SQLite DB, .storage
 ├── esphome/
-│   └── config/              # ESPHome device configurations
+│   └── config/
+│       ├── sunsynk.yaml    # ESP32 + Modbus integration
+│       └── secrets.yaml    # wifi / api / ota secrets
 └── mosquitto/
-    ├── config/              # mosquitto.conf
-    ├── data/
-    └── log/
+    ├── config/             # mosquitto.conf
+    ├── data/               # (mounted from /opt/stage9software/mosquitto/data)
+    └── log/                # (mounted from /opt/stage9software/mosquitto/log)
 ```
 
 ## Sunsynk Inverter — ESP32 RS485 Wiring
@@ -67,15 +80,34 @@ docker compose up -d
 | VCC | 5V | Black | Power |
 | GND | GND | Brown | Ground |
 
-### RS485 to Inverter
-- Connect MAX485 **A** and **B** screw terminals to the Sunsynk **Meter-485** port (not the CAN/BMS port)
-- If no communication, try **swapping A and B** wires
+### RS485 to inverter
+- Connect MAX485 **A** and **B** screw terminals to the Sunsynk
+  **Meter-485** port (not the CAN/BMS port).
+- If no communication, try **swapping A and B** wires.
 
-### ESPHome Config
+### ESPHome config
 - Config file: `esphome/config/sunsynk.yaml`
 - Secrets file: `esphome/config/secrets.yaml`
 - Modbus: 9600 baud, 8N1, address `0x00`
+- A fallback WiFi AP is configured for recovery if the configured SSID is
+  unreachable.
 
-### Create Folder
-mkdir -p /opt/stage9software/mosquitto/data
-mkdir -p /opt/stage9software/mosquitto/log
+## Secrets
+
+`!secret` references resolve against `esphome/config/secrets.yaml` and
+`homeassistant/config/secrets.yaml`.
+
+> **Warning:** `wifi_password`, `api_key`, and `ota_password` are currently
+> committed in the ESPHome `secrets.yaml`. Rotate them before sharing this
+> repository, or move them out to an untracked secrets store.
+
+## Networking
+
+The Mosquitto address is hardcoded in `esphome/config/sunsynk.yaml` as
+`192.168.0.50:1883`. The host running this stack must be reachable at that IP
+from the ESP32 on the LAN, and from [SynkFlowAPI](../SynkFlowAPI).
+
+## Related projects
+
+- [SynkFlow](../SynkFlow) — Flutter client
+- [SynkFlowAPI](../SynkFlowAPI) — backend API

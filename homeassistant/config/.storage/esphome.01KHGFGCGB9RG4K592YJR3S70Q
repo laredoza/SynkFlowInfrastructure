@@ -8,7 +8,7 @@
       "name": "sunsynk",
       "friendly_name": "",
       "mac_address": "E4:65:B8:54:1F:88",
-      "compilation_time": "2026-03-22 22:54:37 +0000",
+      "compilation_time": "2026-03-24 15:45:44 +0000",
       "model": "esp32dev",
       "manufacturer": "Espressif",
       "has_deep_sleep": false,
@@ -37,118 +37,6 @@
       "major": 1,
       "minor": 14
     },
-    "switch": [
-      {
-        "object_id": "sunsynk_toggle_solar_sell",
-        "key": 1803458548,
-        "name": "sunsynk Toggle Solar Sell",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_toggle_system_timer",
-        "key": 3654895531,
-        "name": "sunsynk Toggle System Timer",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_toggle_priority_load",
-        "key": 1386331717,
-        "name": "sunsynk Toggle Priority Load",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_toggle_force_generator",
-        "key": 998622241,
-        "name": "sunsynk Toggle Force Generator",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time1",
-        "key": 2237564319,
-        "name": "sunsynk Grid Charge Time1",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time2",
-        "key": 2237564316,
-        "name": "sunsynk Grid Charge Time2",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time3",
-        "key": 2237564317,
-        "name": "sunsynk Grid Charge Time3",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time4",
-        "key": 2237564314,
-        "name": "sunsynk Grid Charge Time4",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time5",
-        "key": 2237564315,
-        "name": "sunsynk Grid Charge Time5",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      },
-      {
-        "object_id": "sunsynk_grid_charge_time6",
-        "key": 2237564312,
-        "name": "sunsynk Grid Charge Time6",
-        "disabled_by_default": false,
-        "icon": "mdi:toggle-switch",
-        "entity_category": 0,
-        "device_id": 0,
-        "assumed_state": false,
-        "device_class": ""
-      }
-    ],
     "select": [
       {
         "object_id": "sunsynk_energy_pattern",
@@ -1350,6 +1238,118 @@
         "device_id": 0,
         "device_class": "",
         "is_status_binary_sensor": false
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "sunsynk_toggle_solar_sell",
+        "key": 1803458548,
+        "name": "sunsynk Toggle Solar Sell",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_toggle_system_timer",
+        "key": 3654895531,
+        "name": "sunsynk Toggle System Timer",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_toggle_priority_load",
+        "key": 1386331717,
+        "name": "sunsynk Toggle Priority Load",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_toggle_force_generator",
+        "key": 998622241,
+        "name": "sunsynk Toggle Force Generator",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time1",
+        "key": 2237564319,
+        "name": "sunsynk Grid Charge Time1",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time2",
+        "key": 2237564316,
+        "name": "sunsynk Grid Charge Time2",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time3",
+        "key": 2237564317,
+        "name": "sunsynk Grid Charge Time3",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time4",
+        "key": 2237564314,
+        "name": "sunsynk Grid Charge Time4",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time5",
+        "key": 2237564315,
+        "name": "sunsynk Grid Charge Time5",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
+      },
+      {
+        "object_id": "sunsynk_grid_charge_time6",
+        "key": 2237564312,
+        "name": "sunsynk Grid Charge Time6",
+        "disabled_by_default": false,
+        "icon": "mdi:toggle-switch",
+        "entity_category": 0,
+        "device_id": 0,
+        "assumed_state": false,
+        "device_class": ""
       }
     ]
   }
