@@ -34,6 +34,26 @@ services:
     networks:
       - synk-flow
 
+  postgres:
+    container_name: postgres
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-synkflow}
+      POSTGRES_USER: ${POSTGRES_USER:-synkflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-synkflow_dev_password}
+    volumes:
+      - /opt/stage9software/postgres/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-synkflow} -d ${POSTGRES_DB:-synkflow}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - synk-flow
+
 networks:
   synk-flow:
     name: synk-flow
