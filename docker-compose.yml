@@ -54,6 +54,27 @@ services:
     networks:
       - synk-flow
 
+  synkflow-api:
+    container_name: synkflow-api
+    image: registry.stage9software.com/synkflow-api:latest
+    pull_policy: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mosquitto:
+        condition: service_started
+    environment:
+      - ConnectionStrings__Default=Host=postgres;Port=5432;Database=${POSTGRES_DB:-synkflow};Username=${POSTGRES_USER:-synkflow};Password=${POSTGRES_PASSWORD:-synkflow_dev_password}
+      - Mqtt__Host=mosquitto
+      - Mqtt__Port=1883
+    volumes:
+      - /opt/stage9software/synkflow-api/data:/app/data
+    ports:
+      - "5174:8080"
+    restart: unless-stopped
+    networks:
+      - synk-flow
+
 networks:
   synk-flow:
     name: synk-flow
