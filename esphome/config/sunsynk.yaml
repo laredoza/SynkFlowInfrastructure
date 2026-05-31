@@ -206,20 +206,16 @@ sensor:
     device_class: battery
     value_type: U_WORD
 
-  # Battery 1 BMS State of Health — reported by the battery BMS over CAN/RS485.
-  # Only populated when the battery has live comms with the inverter; reads 0
-  # for voltage-only/"dumb" batteries. Changes very slowly → poll on the slow tier.
-  - platform: modbus_controller
-    skip_updates: ${slow_skip_updates}
-    name: "${friendly_name} Battery SOH"
-    id: inverter_battery_soh
-    register_type: holding
-    address: 224
-    unit_of_measurement: "%"
-    accuracy_decimals: 0
-    device_class: battery
-    state_class: measurement
-    value_type: U_WORD
+  # Battery SOH: NOT available over Modbus on this inverter firmware.
+  # The LCD shows Pylontech SOH (read over CAN) but it is not mirrored to any
+  # holding register — exhaustively probed 210-228, 253-256, 310-344, 600-612
+  # and the value (98) appears nowhere. Do not re-add an SOH sensor.
+  #
+  # BMS registers that DO work on this unit (single-phase Sunsynk, if ever needed):
+  #   312 BMS charge voltage (x0.01 V)   314 charge current limit (A)
+  #   315 discharge current limit (A)    316 BMS SOC (%)
+  #   317 BMS voltage (x0.01 V)          318 BMS current (signed, x0.01 A)
+  #   319 BMS temperature (raw, -1000 then x0.1 °C)
 
   - platform: modbus_controller
     name: "${friendly_name} Battery Power"
