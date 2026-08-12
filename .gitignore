@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Docker volumes / data
+mosquitto/data/
+mosquitto/log/
+homeassistant/.storage/
+homeassistant/*.log
+homeassistant/home-assistant_v2.db
+homeassistant/home-assistant_v2.db-shm
+homeassistant/home-assistant_v2.db-wal
+homeassistant/tts/
+homeassistant/.cloud/
+
+# ESPHome build artifacts
+esphome/config/.esphome/
